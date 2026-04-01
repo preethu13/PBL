@@ -1,0 +1,23 @@
+from pathlib import Path
+
+# Absolute path to the model, regardless of working directory
+_SRC_DIR = Path(__file__).resolve().parent.parent        # → src/
+_ROOT_DIR = _SRC_DIR.parent                              # → project root
+
+CONF_THRESHOLD = 0.4
+MODEL_PATH = str(_ROOT_DIR / "models" / "best.pt")
+MAX_DISTANCE = 50
+MAX_MISSING_FRAME = 5
+HISTORY_LENGTH = 15
+FPS = 30
+
+# metrics in percentile to be compared with other vehicles 
+SPEED_HIGH = 0.85
+ACCEL_HIGH = 0.90
+PATH_RATIO_HIGH = 1.5
+THRESHOLD_ANGLE = 0.436
+LOW_DIR_CHANGE = 3
+HIGH_DIR_CHANGE = 6 
+SPEED_PENALTY = 3
+ACC_PENALTY = 4
+ERRATIC_PENALTY = 5

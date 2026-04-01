@@ -1,0 +1,8 @@
+[tool.ruff]
+select = ["E", "F", "I"]   # VS Code default vibe
+ignore = [
+  "D",    ]
+
+[tool.ruff.format]
+quote-style = "double"
+
